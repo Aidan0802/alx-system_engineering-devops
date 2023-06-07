@@ -1,1 +1,3 @@
-./4-listmorefiles  -list all files including hidden files
+./0-current_working_folder  - display current working folder
+./curent
+helo
