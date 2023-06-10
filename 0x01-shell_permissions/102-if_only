@@ -1,2 +1,2 @@
 #!/bin/bash
-if [[ find hello -user guillaume ]] then chown betty hello
+find . -user guillaume -name hello | grep chown betty hello
