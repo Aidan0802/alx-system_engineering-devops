@@ -1,0 +1,3 @@
+#!/bin/bash
+if find hello -user guillaume
+       chown betty hello	
