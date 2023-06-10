@@ -1,2 +1,2 @@
 #!/bin/bash
-chown betty hello if find hello -user guillaume
+if find hello -user guillaume then chown betty hello
