@@ -1,2 +1,2 @@
 #!/bin/bash
-find . -user guillaume -name hello | grep chown betty hello
+chown betty hello
