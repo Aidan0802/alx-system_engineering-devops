@@ -1,0 +1,3 @@
+#!/bin/bash
+echo '#!/bin/bash' > ls_cwd_content | echo 'ls -la' >> ls_cwd_content | chmod u+x ls_cwd_content
+
