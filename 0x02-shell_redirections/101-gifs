@@ -1,2 +1,2 @@
 #!/bin/bash
-find . -name "*.gif" -exec ls -laR {} +;
+find . -name *.gif -exec ls -laR ;
