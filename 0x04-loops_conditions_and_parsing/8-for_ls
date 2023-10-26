@@ -5,6 +5,7 @@ do
 	if [[ $file != .* ]]
 	then
 		name="${file#-}"
-		echo "$name"
+		clean_name="${name##*[0-9]-}"
+		echo "$clean_name"
 	fi
 done
