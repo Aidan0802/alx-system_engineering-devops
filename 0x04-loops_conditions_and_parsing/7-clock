@@ -6,10 +6,15 @@ while [ $hour -le 12 ]
 do
 	minute=1
 	echo "hour: $hour"
-	while [ $minute -le 59 ]
-	do
-		echo $minute
-		minute=$((minute + 1))
-	done
+	if [ $hour -eq 12 ]
+	then
+		break
+	else
+		while [ $minute -le 59 ]
+		do
+			echo $minute
+			minute=$((minute + 1))
+		done
+	fi
 	hour=$((hour + 1))
 done
