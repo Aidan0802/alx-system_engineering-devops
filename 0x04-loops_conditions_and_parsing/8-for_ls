@@ -4,7 +4,6 @@ for file in *
 do
 	if [[ $file != .* ]]
 	then
-		name="${file#-}"
 		cleaned_name="${file#*-}"
 		echo "$cleaned_name"
 
