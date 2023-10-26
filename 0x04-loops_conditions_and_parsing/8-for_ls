@@ -6,7 +6,7 @@ do
 	then
 		name="${file#-}"
 		clean_name="${name##*[0-9]-}"
-		printf "%s " $clean_name
+		printf "%s " "$clean_name"
 	else
 		echo
 	fi
