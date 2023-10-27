@@ -1,13 +1,3 @@
 #!/usr/bin/env bash
 # This script stops 7-highlander
-stop_loop()
-{
-    if [ -f stop_signal ]
-    then
-        rm stop_signal
-        pkill -f "7-highlander"
-        exit
-    fi
-}
-
-trap stop_loop SIGINT
+pkill -SIGTERM -f "7-highlander"
