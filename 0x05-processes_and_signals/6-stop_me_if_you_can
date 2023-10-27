@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+# This script stops 4-to_inifity_and_beyond
+touch stop_signal
+
+stop_loop()
+{
+	if [ -f stop_signal ]
+	then
+		rm stop_signal
+		exit
+	fi
+}
+
+trap stop_loop SIGINT

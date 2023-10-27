@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+# Stops 4-to_infinity_and_beyond loop
+set -x
+script_name="4-to_infinity_and_beyond"
+pid=$(pgrep -o "$script_name")
+
+if [ -n "$pid" ]
+then
+    kill "$pid"
+fi

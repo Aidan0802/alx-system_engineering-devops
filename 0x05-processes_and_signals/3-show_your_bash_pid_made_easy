@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+# Displays the PID, with the process name that contains the word bash
+for pid in /proc/[0-9]*
+do
+	name=$(awk -F'\t' '/Name/{print $2}' "$pid/status" 2>/dev/null)
+	if [[ $name == *bash* ]]
+	then
+		pid_num=$(basename "$pid")
+		echo "$pid_num $name"
+	fi
+done
