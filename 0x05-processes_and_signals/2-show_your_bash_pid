@@ -1,8 +1,7 @@
 #!/usr/bin/env bash
 # Displays a list of current running processes that contain bash word
 # shellcheck disable=SC2009
-ps aux | grep "bash" | grep -v "grep" | while read -r line
+ps aux --forest | grep "bash" |while read -r line
 do
-  pid=$(echo "$line" | awk '{print $2}')
-  echo "Bash process found with PID: $pid"
+	echo "$line"
 done
