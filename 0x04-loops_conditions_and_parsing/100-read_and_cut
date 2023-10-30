@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+# Displays the content of the file /etc/passwd
+if [ ! -r /etc/passwd ]
+then
+	echo "The /etc/passwd file is not readable"
+	exit 1
+fi
+
+while read -r line
+do
+	username=$(echo "$line" | awk -F: '{print $1}')
+	home=$(echo "$line" | awk -F: '{print $6}')
+	uid=$(echo "$line" | awk -F: '{print $3}')
+
+	echo "$username:$uid:$home"
+done < /etc/passwd
