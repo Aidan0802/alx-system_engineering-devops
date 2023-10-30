@@ -8,8 +8,8 @@ fi
 
 while IFS=: read -r username _ uid _ _ home shell
 do
-	echo -n "The user $username is part of the $uid gang,"
+	echo -n "The user $username is part of the $GID gang,"
 	echo -n " lives in $home and rides $shell."
-	echo -n " User ID's place is protected by the passcode PASSWORD,"
-	echo " more info about the user here: USER $uid INFO"
+	echo -n " $UID's place is protected by the passcode $password,"
+	echo " more info about the user here: $gecos"
 done < /etc/passwd
