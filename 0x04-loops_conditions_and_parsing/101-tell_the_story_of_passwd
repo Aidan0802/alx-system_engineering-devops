@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+# Displays the content of the file /etc/passwd, using the while loop + IFS.
+if [ ! -r /etc/passwd ]
+then
+	echo "The /etc/passwd file is not readable"
+	exit 1
+fi
+
+while IFS=: read -r username _ uid _ _ home shell
+do
+	echo -n "The user $username is part of the $uid gang,"
+	echo -n " lives in $home and rides $shell."
+	echo -n " User ID's place is protected by the passcode PASSWORD,"
+	echo " more info about the user here: USER $uid INFO"
+done < /etc/passwd
