@@ -11,7 +11,7 @@ update_host_entry()
 	then
 		sed -i -E "s/^\S+\s+$host_name$/$host_ip\t$host_name/" /etc/hosts
 	else
-		sh -c "echo '$host_ip $host_name' >> /etc/hosts"
+		sh -c "echo '$host_ip\t$host_name' >> /etc/hosts"
 	fi
 }
 
